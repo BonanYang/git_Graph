@@ -91,12 +91,12 @@ void BFS(int k)
 
 void DFSA(int i)
 {
-    cout<<"访问出发顶点序号: "<<i<<endl;
+    cout<<"the start point "<<i<<endl;
     visited[i] = 1;
     cout<<g->vexs[i]<<" "<<endl;
-    for (int j = 0; j < N; ++j)//依次遍历i顶点的邻接点
+    for (int j = 0; j < N; ++j)
     {
-        if ((g->adjs[i][j]==1) && (visited[j]==0))//与i相连且未被访问过
+        if ((g->adjs[i][j]==1) && (visited[j]==0))
         {
             DFSA(j);
         }
